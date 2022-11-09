@@ -1,3 +1,11 @@
-var addDays = require("date-fns/addDays");
+const addDays = require("date-fns/addDays");
 
-console.log(addDays(new Date(08, 11, 2022), 10));
+const getDateAfter = (days) => {
+  const newDate = addDays(new Date(2022, 08, 22), days);
+
+  return `${newDate.getDate()}-${
+    newDate.getMonth() + 1
+  }-${newDate.getFullYear()}`;
+};
+
+module.exports = getDateAfter;
